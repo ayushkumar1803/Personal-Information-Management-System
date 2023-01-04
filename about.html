@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html { 
+  background: url(frame5.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  top: 0;
+  left: 0;
+  background-color: mintcream;
+  overflow-x: hidden;
+  transition: 0.2s;
+  padding-top: 40px;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #0c3f77;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color:  rgb(51, 154, 206);
+  color: White;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color:#ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+<div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <a href="home.html">Home</a>
+  <a href="loginadmin.html">Admin</a>
+  <a href="login1.html">Login</a>
+  <a href="create.html">Create</a>
+  <a href="about.html">About</a>
+</div>
+
+<button class="openbtn" onclick="openNav()">&#9776 Menu</button>  
+<script>
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "180px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+</script>
+   
+</body>
+</html>
